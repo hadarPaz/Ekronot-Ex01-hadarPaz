@@ -2,10 +2,6 @@
 #include "Stack.h"
 #include <iostream>
 
-int main()
-{
-	reverse10();
-}
 void reverse(int* nums, unsigned int size)
 {
 	int i = 0;

@@ -10,12 +10,13 @@ void push(Stack* s, unsigned int element)
 
 int pop(Stack* s)
 {
-	if (removeNode(&s->head) == 0)
+	int num = removeNode(&s->head);
+	if (num != -1)
 	{
 		s->count--;
-		return 0;
+		return num;
 	}
-	return -1;
+	return num;
 }
 
 void initStack(Stack* s)

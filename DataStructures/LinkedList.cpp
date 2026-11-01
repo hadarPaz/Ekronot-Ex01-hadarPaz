@@ -21,13 +21,14 @@ void addNode(LinkedList** head, unsigned int node)
 
 int removeNode(LinkedList** head)
 {
+	int num = -1;
 	if (*head != NULL)
 	{
+		num = (*head)->num;
 		LinkedList *temp = *head;
 		*head = (*head)->next;
 		delete temp;
-		return 0;
 	}
-	return -1;
+	return num;
 	
 }
