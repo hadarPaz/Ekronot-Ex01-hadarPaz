@@ -1,7 +1,7 @@
 #include "LinkedList.h"
 #include <iostream>
 
-void addNode(LinkedList** head, int node)
+void addNode(LinkedList** head, unsigned int node)
 {
 	LinkedList* newNode = new LinkedList;
 	newNode->num = node;
@@ -19,13 +19,15 @@ void addNode(LinkedList** head, int node)
 	}
 }
 
-void removeNode(LinkedList** head)
+int removeNode(LinkedList** head)
 {
 	if (*head != NULL)
 	{
 		LinkedList *temp = *head;
 		*head = (*head)->next;
 		delete temp;
+		return 0;
 	}
+	return -1;
 	
 }

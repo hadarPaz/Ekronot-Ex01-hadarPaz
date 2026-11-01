@@ -3,11 +3,11 @@
 
 typedef struct LinkedList
 {
-	int num;
+	unsigned int num;
 	struct LinkedList* next;
 } LinkedList;
 
-void addNode(LinkedList** head, int node);
-void removeNode(LinkedList** head);
+void addNode(LinkedList** head, unsigned int node);
+int removeNode(LinkedList** head);
 
 #endif
